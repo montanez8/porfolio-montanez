@@ -1,0 +1,34 @@
+---
+interface Props {
+  url: string;
+  image: string;
+  title: string;
+  body: string;
+  slack: string;
+}
+
+const { url, image, title, body, slack } = Astro.props;
+---
+
+<li class="card">
+  <a class="card__link" href={url}>
+    <div class="center">
+      <img
+        class="card__img"
+        width="200"
+        height="150"
+        src={image}
+        alt="ProjectImage"
+      />
+    </div>
+    <h3 class="card__title">
+      {title}
+    </h3>
+    <p class="card__txt">
+      {body}
+    </p>
+    <p class="card__txt">
+      <b>Tecnologias: </b>{slack}
+    </p>
+  </a>
+</li>
