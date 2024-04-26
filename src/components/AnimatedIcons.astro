@@ -1,0 +1,29 @@
+---
+// <AnimatedIcons/> component
+---
+
+<div class="relative flex space-x-4 animate-move">
+  <slot />
+</div>
+
+<style>
+  @layer utilities {
+    .animate-move {
+      animation: move 5s ease-in-out infinite;
+    }
+  }
+
+  @keyframes move {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: calc(
+        100% - 200px
+      ); /* Ajusta el valor para controlar la distancia */
+    }
+    100% {
+      left: 0;
+    }
+  }
+</style>

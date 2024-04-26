@@ -1,116 +1,166 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Projects from "../components/projects.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Academic from "../components/icons/Academic.astro";
+import Cpu from "../components/icons/Cpu.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import Layout from "../layouts/Layout.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Badge from "../components/Badge.astro";
+import Mail from "../components/icons/Mail.astro";
 const pageTitle = "Porfolio";
 ---
 
 <Layout pageTitle={pageTitle}>
-  <div class="gif">
-    <img alt="" src="/perfil.jpg" />
+  <main class="px-2">
+    <SectionContainer id="sobre-mi" class="py-8 md:py-24">
+      <img
+        class="rounded-full shadow-lg size-28"
+        alt="Imagen de perfil "
+        src="/perfil.jpg"
+      />
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl py-2">
+        Hola👋, Soy Carlos
+      </h1>
+      <span class="badge">Java Junior (Developer) Back-end</span>
+      <div class="flex space-x-4 py-4">
+        <a
+          href="https://github.com/montanez8"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center transition md:justify-center md:hover:scale-125"
+        >
+          <Badge> <GitHub /> GitHub </Badge>
+        </a>
+        <a
+          href="mailto:montanezcompany.r@gmail.com"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center transition md:justify-center md:hover:scale-125"
+        >
+          <Badge> <Mail /> contáctame </Badge>
+        </a>
+        <a
+          rel="noopener"
+          class="flex items-center transition md:justify-center md:hover:scale-125"
+          href="/public/Carlos Arturo Montañez Riodriguez.pdf"
+          download
+        >
+          <Badge>Descargar cv</Badge>
+        </a>
+      </div>
+    </SectionContainer>
+  </main>
+  <div>
+    <SectionContainer class="py-2">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-1">
+        <ProfileCheck class="size-8" /> Sobre mi
+      </h2>
+      <p>
+        Soy un Desarrollador Junior apasionado por la tecnología y comprometido
+        con la excelencia. Como una persona autodidacta, responsable y
+        comprometida, me especializo en el diseño e implementación de soluciones
+        tecnológicas eficientes y efectivas.
+      </p>
+      <p>
+        Estoy comprometido con la calidad en todo lo que hago, y siempre estoy
+        dispuesto a ir el extra para asegurarme de que mis proyectos se
+        completen de manera oportuna y efectiva. Me enorgullece ser una persona
+        responsable y confiable, y siempre estoy dispuesto a trabajar en equipo
+        para lograr los objetivos comunes.
+      </p>
+    </SectionContainer>
+
+    <SectionContainer id="tecnologias" class="py-24 px-4">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-1">
+        <Cpu class="size-8" />
+        Tecnologías
+      </h2>
+      <div class="flex flex-row items-center">
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="Java"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+        />
+
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="Angular"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+        />
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="CSS"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        />
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="HTML"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        />
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="JavaScript"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        />
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="Git"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+        />
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="Docker"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"
+        />
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="Spring Boot"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+        />
+        <!-- mysql -->
+        <img
+          class="skills__img"
+          width="46"
+          height="46"
+          alt="MySQL"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+        />
+      </div>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="estudios">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3">
+        <Academic class="size-8" />
+        Estudios
+      </h2>
+      <Experience />
+    </SectionContainer>
   </div>
-
-  <h1>Hola👋, Soy Carlos</h1>
-  <span class="badge">Java Junior (Developer)</span>
-  <h2><ProfileCheck class="size-8" /> Sobre mi</h2>
-  <p>
-    Soy un Desarrollador Junior apasionado por la tecnología y comprometido con
-    la excelencia. Como una persona autodidacta, responsable y comprometida, me
-    especializo en el diseño e implementación de soluciones tecnológicas
-    eficientes y efectivas.
-  </p>
-  <p>
-    Estoy comprometido con la calidad en todo lo que hago, y siempre estoy
-    dispuesto a ir el extra para asegurarme de que mis proyectos se completen de
-    manera oportuna y efectiva. Me enorgullece ser una persona responsable y
-    confiable, y siempre estoy dispuesto a trabajar en equipo para lograr los
-    objetivos comunes.
-  </p>
-
-  <p></p>
-  <div class="center">
-    <a href="/projects/">
-      <button class="btn">Mis Proyectos</button>
-    </a>
-  </div>
-  <h2>Tecnologías</h2>
-  <div class="skills center">
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="Java"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-    />
-
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="Angular"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-    />
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="CSS"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-    />
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="HTML"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-    />
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="JavaScript"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-    />
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="Git"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-    />
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="Docker"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"
-    />
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="Spring Boot"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
-    />
-    <!-- mysql -->
-    <img
-      class="skills__img"
-      width="46"
-      height="46"
-      alt="MySQL"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
-    />
-  </div>
-
-  <SectionContainer id="proyectos">
-    <h2
-      class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-    >
-      <CodeIcon class="size-7" />
-      Proyectos
-    </h2>
-    <Projects />
-  </SectionContainer>
 </Layout>

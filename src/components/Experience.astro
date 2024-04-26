@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Desarrollo de sistemas Informaticos",
+    company: "Unidades Tecnologicas de Santander",
+    description:
+      "Implementar aplicaciones informáticas usando metodologías de desarrollo de software y tecnologías de información emergentes, para apoyar la solución de problemáticas en el medio productivo.",
+    link: "https://www.uts.edu.co/sitio/tecnologia-en-desarrollo-de-sistemas-informaticos/#1562800426029-b3fd2807-6433",
+  },
+  {
+    date: "Abril 2024",
+    title: "Entrenamiento en desarrollo de software",
+    company: "Campuslands",
+    description:
+      "10 meses de entrenamiento equivalente " +
+      "1.600 horas de estudio y práctica en Desarrollo de Software. " +
+      "300 horas de inmersión de inglés." +
+      "200 horas de Desarrollo de Habilidades Blandas",
+    link: "https://www.campuslands.com/",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
